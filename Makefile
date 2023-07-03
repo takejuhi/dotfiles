@@ -1,15 +1,12 @@
 DOTFILE ?= ~/dotfile
 ZDOTDIR ?= ~/.config/zsh
 
-packages = bash git nvim tmux zsh
+packages = git zsh nvim tmux 
 install  = $(packages:%=%/install)
 
 .PHONY: all $(packages) $(install)
 
 all: $(packages)
-
-bash:
-	@DOTFILE=${DOTFILE} bin/link bash/.bashrc ~
 
 git: git/install
 	@DOTFILE=${DOTFILE} bin/link git/config ${XDG_CONFIG_HOME}/git
@@ -26,6 +23,7 @@ zsh:
 	@DOTFILE=${DOTFILE} bin/link zsh/.zshrc ${ZDOTDIR}
 	@DOTFILE=${DOTFILE} bin/link zsh/.zlogin ${ZDOTDIR}
 	@DOTFILE=${DOTFILE} bin/link zsh/.zlogout ${ZDOTDIR}
+	@./zsh/chsh
 
 $(install):
 	@DOTFILE=${DOTFILE} $@
