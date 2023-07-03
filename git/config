@@ -1,3 +1,7 @@
 [user]
 	name = takejuhi
 	email = shoma.takehara.7c@stu.hosei.ac.jp
+
+[alias]
+	st = status
+	cm = commit
