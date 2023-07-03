@@ -119,3 +119,5 @@ fi
 if [ -f ~/dotfile/bash/env ]; then
 	. ~/dotfile/bash/env
 fi
+
+source /home/take/linux-sgx/linux/installer/bin/sgxsdk/environment

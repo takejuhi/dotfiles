@@ -4,4 +4,4 @@
 
 [alias]
 	st = status
-	cm = commit
+	co = commit
