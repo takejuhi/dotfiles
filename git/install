@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+bash $DOTFILE/bin/check git
+
+if [ ! $? ]; then
+	sudo apt install -y git
+fi

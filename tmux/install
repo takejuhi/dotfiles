@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+bash /bin/check tmux
+
+if [ $? = 1 ]; then
+	sudo apt install -y tmux
+fi

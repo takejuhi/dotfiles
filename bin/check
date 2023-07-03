@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+path=$(which $1)
+
+if [ "$path" != "" ] && [ -x $path ]; then
+	echo "$1 is already installed: $path"
+	exit 0
+fi
+
+exit 1

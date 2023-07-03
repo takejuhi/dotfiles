@@ -1,3 +1,11 @@
+#!/usr/bin/bash
+
+bash $DOTFILE/bin/check nvim
+
+if [ $? ]; then
+	exit 0
+fi
+
 # build prerequisties
 sudo apt-get install \
 	ninja-build \

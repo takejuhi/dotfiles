@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+bash ${DOTFILE}/bin/check zsh
+
+if [ $? = 0 ]; then
+	sudo apt install -y zsh
+fi
