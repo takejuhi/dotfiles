@@ -18,7 +18,7 @@ nvim: nvim/install
 tmux: tmux/install
 	@DOTFILE=${DOTFILE} bin/link tmux/tmux.conf ${XDG_CONFIG_HOME}/tmux
 
-zsh:
+zsh: zsh/install
 	@DOTFILE=${DOTFILE} bin/link zsh/.zshenv ~
 	@DOTFILE=${DOTFILE} bin/link zsh/.zprofile ${ZDOTDIR}
 	@DOTFILE=${DOTFILE} bin/link zsh/.zshrc ${ZDOTDIR}
