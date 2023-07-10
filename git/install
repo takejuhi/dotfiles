@@ -2,6 +2,6 @@
 
 bash $DOTFILE/bin/check git
 
-if [ ! $? ]; then
+if [ "$?" = 1 ]; then
 	sudo apt install -y git
 fi

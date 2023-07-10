@@ -2,7 +2,7 @@
 
 bash $DOTFILE/bin/check nvim
 
-if [ $? ]; then
+if [ "$?" = "1" ]; then
 	exit 0
 fi
 
