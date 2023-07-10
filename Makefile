@@ -1,5 +1,6 @@
-DOTFILE ?= ~/dotfile
-ZDOTDIR ?= ~/.config/zsh
+DOTFILE         ?= ~/dotfile
+ZDOTDIR         ?= ~/.config/zsh
+XDG_CONFIG_HOME ?= ~/.config
 
 packages = git zsh nvim tmux 
 install  = $(packages:%=%/install)
