@@ -25,7 +25,7 @@ zsh: zsh/install
 	@DOTFILE=${DOTFILE} bin/link zsh/.zshrc ${ZDOTDIR}
 	@DOTFILE=${DOTFILE} bin/link zsh/.zlogin ${ZDOTDIR}
 	@DOTFILE=${DOTFILE} bin/link zsh/.zlogout ${ZDOTDIR}
-	#@./zsh/chsh
+	@./zsh/chsh
 
 $(install):
 	@DOTFILE=${DOTFILE} $@
