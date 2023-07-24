@@ -12,9 +12,9 @@ all: $(packages)
 
 vsc:
 	@sudo apt install -y zsh
-	@ln -vs ~/dotfiles/zsh/.zshenv ${HOME}
-	@ln -vs ~/dotfiles/zsh/.zprofile ${HOME}
-	@ln -vs ~/dotfiles/zsh/.zshrc ${HOME}
+	@ln -vfs ~/dotfiles/zsh/.zshenv ${HOME}
+	@ln -vfs ~/dotfiles/zsh/.zprofile ${HOME}
+	@ln -vfs ~/dotfiles/zsh/.zshrc ${HOME}
 	#@echo "export ZDOTDIR=\${HOME}/.config/zsh" | sudo tee /etc/zsh/zshenv > /dev/null
 	#@DOTFILE=~/dotfiles bin/link zsh/.zshenv ${HOME}
 	#@DOTFILE=~/dotfiles bin/link zsh/.zprofile ${ZDOTDIR}
