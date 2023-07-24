@@ -12,7 +12,7 @@ all: $(packages)
 
 vsc:
 	@sudo apt install -y zsh
-	@DOTFILE=${PWD} bin/link zsh/.zshenv ${ZDOTDIR}
+	@DOTFILE=${PWD} bin/link zsh/.zshenv ${HOME}
 	@DOTFILE=${PWD} bin/link zsh/.zprofile ${ZDOTDIR}
 	@DOTFILE=${PWD} bin/link zsh/.zshrc ${ZDOTDIR}
 	@DOTFILE=${PWD} bin/link zsh/.zlogin ${ZDOTDIR}
