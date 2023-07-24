@@ -6,9 +6,18 @@ ZDOTDIR          = ~/.config/zsh
 packages = git zsh nvim tmux 
 install  = $(packages:%=%/install)
 
-.PHONY: all $(packages) $(install)
+.PHONY: all $(packages) $(install) vsc
 
 all: $(packages)
+
+vsc:
+	@sudo apt install -y zsh
+	@DOTFILE=${PWD} bin/link zsh/.zshenv ${ZDOTDIR}
+	@DOTFILE=${PWD} bin/link zsh/.zprofile ${ZDOTDIR}
+	@DOTFILE=${PWD} bin/link zsh/.zshrc ${ZDOTDIR}
+	@DOTFILE=${PWD} bin/link zsh/.zlogin ${ZDOTDIR}
+	@DOTFILE=${PWD} bin/link zsh/.zlogout ${ZDOTDIR}
+	@echo "export ZDOTDIR=\${HOME}/.config/zsh" | sudo tee /etc/zsh/zshenv > /dev/null
 
 git: git/install
 	@DOTFILE=${DOTFILE} bin/link git/config ${XDG_CONFIG_HOME}/git
