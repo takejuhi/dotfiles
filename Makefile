@@ -12,12 +12,15 @@ all: $(packages)
 
 vsc:
 	@sudo apt install -y zsh
-	@DOTFILE=~/dotfiles bin/link zsh/.zshenv ${HOME}
-	@DOTFILE=~/dotfiles bin/link zsh/.zprofile ${ZDOTDIR}
-	@DOTFILE=~/dotfiles bin/link zsh/.zshrc ${ZDOTDIR}
-	@DOTFILE=~/dotfiles bin/link zsh/.zlogin ${ZDOTDIR}
-	@DOTFILE=~/dotfiles bin/link zsh/.zlogout ${ZDOTDIR}
-	@echo "export ZDOTDIR=\${HOME}/.config/zsh" | sudo tee /etc/zsh/zshenv > /dev/null
+	@ln -vs ~/dotfiles/zsh/.zshenv ${HOME}
+	@ln -vs ~/dotfiles/zsh/.zprofile ${HOME}
+	@ln -vs ~/dotfiles/zsh/.zshrc ${HOME}
+	#@echo "export ZDOTDIR=\${HOME}/.config/zsh" | sudo tee /etc/zsh/zshenv > /dev/null
+	#@DOTFILE=~/dotfiles bin/link zsh/.zshenv ${HOME}
+	#@DOTFILE=~/dotfiles bin/link zsh/.zprofile ${ZDOTDIR}
+	#@DOTFILE=~/dotfiles bin/link zsh/.zshrc ${ZDOTDIR}
+	#@DOTFILE=~/dotfiles bin/link zsh/.zlogin ${ZDOTDIR}
+	#@DOTFILE=~/dotfiles bin/link zsh/.zlogout ${ZDOTDIR}
 
 git: git/install
 	@DOTFILE=${DOTFILE} bin/link git/config ${XDG_CONFIG_HOME}/git
