@@ -17,7 +17,7 @@ git: git/config
 zsh: zsh/.zlogin zsh/.zlogout zsh/.zprofile zsh/.zshenv zsh/.zshrc
 	@sudo apt install -y zsh
 	@echo "export ZDOTDIR=~/.config/zsh" | sudo tee /etc/zsh/zshenv > /dev/null
-	@chsh -s $(which zsh)
+	@chsh -s /usr/bin/zsh
 	@sh bin/link.sh zsh/.zshenv ~
 	@sh bin/link.sh zsh/.zprofile ${ZDOTDIR}
 	@sh bin/link.sh zsh/.zshrc ${ZDOTDIR}
