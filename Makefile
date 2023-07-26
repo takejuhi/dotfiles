@@ -7,6 +7,7 @@ DEP_NVIM = ninja-build gettext cmake unzip curl
 
 packages = git zsh nvim tmux 
 
+.PHONY: all $(packages)
 all: $(packages)
 
 git: git/config
