@@ -1,4 +1,4 @@
-DOTFILE         ?= ~/dotfile
+DOTFILE         ?= ~/dotfiles
 ZDOTDIR         ?= ~/.config/zsh
 XDG_CONFIG_HOME ?= ~/.config
 ZDOTDIR          = ~/.config/zsh
